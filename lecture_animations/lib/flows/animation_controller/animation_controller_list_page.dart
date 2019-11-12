@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lecture_animations/flows/animation_controller/fade_transition_page.dart';
 import 'package:lecture_animations/flows/animation_controller/transform_page.dart';
 
 class AnimationControllerListPage extends StatelessWidget {
-  final _items = [
-    'Transform',
-  ];
+  final _items = ['Transform', 'Fade transition'];
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +29,8 @@ class AnimationControllerListPage extends StatelessWidget {
     switch (index) {
       case 0:
         return TransformPage();
+      case 1:
+        return FadeTransitionPage();
       default:
         return null;
     }

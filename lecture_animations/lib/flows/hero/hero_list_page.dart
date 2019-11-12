@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lecture_animations/flows/hero/normal_transition/hero_start_page.dart';
 import 'package:lecture_animations/flows/hero/transition/hero_transition_start_page.dart';
 
 class HeroListPage extends StatelessWidget {
-  final _items = ['Hero transition'];
+  final _items = ['Hero transition', 'Real case'];
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,8 @@ class HeroListPage extends StatelessWidget {
     switch (index) {
       case 0:
         return HeroTransitionStartPage();
+      case 1:
+        return HeroStartPage();
       default:
         return null;
     }
