@@ -33,7 +33,7 @@ class HeroTransitionStartPage extends StatelessWidget {
     if (index%4 == 0) {
       final tagIndex = (index/4).round();
       return Hero(
-        transitionOnUserGestures: false,
+        transitionOnUserGestures: true,
         child: Icon(Icons.person),
         tag: 'person $tagIndex',
       );

@@ -29,7 +29,7 @@ class _AnimatedPositionPageState extends State<AnimatedPositionPage> {
             opacity: shouldShowText ? 1 : 0,
             child: const Text('Hello new world'),
             duration: const Duration(seconds: 2),
-            curve: Interval(0.7, 1, curve: Curves.easeIn),
+            curve: shouldShowText ? Interval(0.7, 1, curve: Curves.easeIn) : Interval(0, 0.2, curve: Curves.easeOut),
           ),
         ),
         AnimatedPositioned(
@@ -41,7 +41,7 @@ class _AnimatedPositionPageState extends State<AnimatedPositionPage> {
             color: Colors.blue,
           ),
           duration: const Duration(seconds: 2),
-          curve: Curves.easeInOut,
+          curve: Curves.easeInOutBack,
         ),
       ]),
       floatingActionButton: FloatingActionButton(

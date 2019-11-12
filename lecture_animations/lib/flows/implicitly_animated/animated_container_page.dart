@@ -11,7 +11,6 @@ class AnimatedContainerPage extends StatefulWidget {
 }
 
 class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
-
   final random = Random();
 
   @override
@@ -25,12 +24,12 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
           width: 100 * random.nextDouble() + 100,
           height: 100 * random.nextDouble() + 100,
           duration: const Duration(seconds: 1),
-          ),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () => setState(() {}),
-            child: const Icon(Icons.refresh),
-          ),
-      );
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => setState(() {}),
+        child: const Icon(Icons.refresh),
+      ),
+    );
   }
 }
