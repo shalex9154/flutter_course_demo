@@ -22,14 +22,14 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
       body: Center(
         child: AnimatedContainer(
           color: Colors.red,
-          width: 100 * random.nextDouble(),
-          height: 100 * random.nextDouble(),
-          duration: Duration(seconds: 1),
+          width: 100 * random.nextDouble() + 100,
+          height: 100 * random.nextDouble() + 100,
+          duration: const Duration(seconds: 1),
           ),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () => setState(() {}),
-            child: Icon(Icons.refresh),
+            child: const Icon(Icons.refresh),
           ),
       );
   }

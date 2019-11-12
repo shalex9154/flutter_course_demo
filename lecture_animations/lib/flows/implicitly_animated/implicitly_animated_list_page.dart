@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_animations/flows/implicitly_animated/container/animated_container_page.dart';
+import 'package:lecture_animations/flows/implicitly_animated/container/animated_position_page.dart';
 
 class ImplisitlyAnimatedListPage extends StatelessWidget {
-  final _items = ['Animated Container'];
+  final _items = ['Animated Container', 'Animated position and opacity'];
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,8 @@ class ImplisitlyAnimatedListPage extends StatelessWidget {
     switch (index) {
       case 0:
         return AnimatedContainerPage();
+      case 1:
+        return AnimatedPositionPage();
       default:
         return null;
     }
