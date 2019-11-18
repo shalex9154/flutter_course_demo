@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:http/http.dart' as http;
@@ -12,16 +11,17 @@ const url = 'https://api.openweathermap.org/data/2.5/weather?q=Kharkiv&units=met
 
 void main() {
   group('fetch weather', () {
+
     test('returns a Weather model if http call completes successfully', () async {
       final client = MockClient();
 
       when(client.get(url))
       .thenAnswer((_) async => http.Response(successJSON, 200));
 
-      expect(await WeatherProvider.getCurrentWeather(client), const TypeMatcher<Weather>());
+      expect((await WeatherProvider.getCurrentWeather(client)).runtimeType, Weather);
     });
 
-    test('throws an exception if the http call completes with an error', () {
+    test('throws an exception if the http call completes with an error', () async {
       final client = MockClient();
 
       when(client.get(url))
@@ -30,4 +30,6 @@ void main() {
       expect(WeatherProvider.getCurrentWeather(client), throwsException);
     });
   });
+
 }
+
