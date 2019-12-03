@@ -15,7 +15,7 @@ class HeroStartPage extends StatelessWidget {
               child: InkWell(
                 child: Hero(
                   tag: 'My hero icon',
-                  child: Icon(Icons.cake),
+                  child: Container(width: 100, height: 100, color: Colors.green,),
                 ),
                 onTap: () => Navigator.push<void>(
                     context,

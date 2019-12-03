@@ -23,7 +23,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
           color: Colors.red,
           width: 100 * random.nextDouble() + 100,
           height: 100 * random.nextDouble() + 100,
-          duration: const Duration(seconds: 1),
+          duration: const Duration(seconds: 5),
         ),
       ),
       floatingActionButton: FloatingActionButton(

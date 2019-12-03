@@ -9,7 +9,17 @@ class HeroEndPage extends StatelessWidget {
         ),
         body: Stack(
           children: <Widget>[
-            Align(alignment: Alignment.center, child: Hero(tag: 'My hero icon', child: Icon(Icons.cake),),)
+            Align(
+              alignment: Alignment.center,
+              child: Hero(
+                tag: 'My hero icon',
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.green,
+                ),
+              ),
+            )
           ],
         ));
   }
